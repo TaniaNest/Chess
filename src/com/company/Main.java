@@ -5,36 +5,37 @@ import java.util.Scanner;
 public class Main  {
 
     public static void main(String[] args) {
-        Scanner w = new Scanner(System.in);
+        Scanner scanWidth = new Scanner(System.in);
         int width ;
 
-        Scanner h = new Scanner(System.in);
+        Scanner scanHeight = new Scanner(System.in);
         int height;
 
         System.out.print("Input the width: ");
-        width = w.nextInt();
+        System.out.print("guhikhioi ");
+        width = scanWidth.nextInt();
 
         while (width <= 0 ){
             System.out.print("Input positive number: ");
-            while (!w.hasNextInt()) {
+            while (!scanWidth.hasNextInt()) {
                 System.out.println("Incorrect value. Input value more than 0 ");
-                w.next();
+                scanWidth.next();
                 System.out.print("Input the width: ");
             }
 
-             width = w.nextInt();
+             width = scanWidth.nextInt();
         }
 
         System.out.print("Input the height: ");
-        height = h.nextInt();
+        height = scanHeight.nextInt();
         while (height <= 0) {
             System.out.print("Input positive number: ");
-            while (!h.hasNextInt()) {
+            while (!scanHeight.hasNextInt()) {
                 System.out.println("Incorrect value. Input value more than 0 ");
                 System.out.print("Input the height: ");
-                h.next();
+                scanHeight.next();
             }
-            height = h.nextInt();
+            height = scanHeight.nextInt();
 
         }
 
