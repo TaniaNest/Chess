@@ -37,8 +37,9 @@ public class Chess {
                     System.out.print('*');
                 }
             }
-            System.out.print('\n');
+            System.out.println();
         }
         return "";
     }
+
 }
