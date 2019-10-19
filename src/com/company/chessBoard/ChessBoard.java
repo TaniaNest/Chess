@@ -3,8 +3,6 @@ package com.company.chessBoard;
 import com.company.model.Model;
 
 public class ChessBoard {
-    private Model model;
-
 
     public String chessBoard(int height,int width) {
 
