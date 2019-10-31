@@ -19,7 +19,7 @@ public class Controller {
         service.chessBoard(model);
     }
 
-    public int createSide(String param) {
+    private int createSide(String param) {
         info.getInfo(param);
         int number = new Input().getNumber();
         while (!validator.isPositiveNumber(number)) {

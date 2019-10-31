@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.service.ChessBoard;
 import com.company.controller.Controller;
 
 
