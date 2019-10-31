@@ -1,53 +1,35 @@
 package com.company.controller;
 
 import com.company.model.Model;
+import com.company.service.ChessBoard;
 import com.company.util.Info;
 import com.company.util.Input;
 import com.company.util.Instruction;
 import com.company.util.Validator;
 
+import javax.xml.ws.Service;
+
 public class Controller {
 
-    Instruction instruction=new Instruction();
-    Input input= new Input();
-    Info info= new Info();
-    Validator validator= new Validator();
+    private Instruction instruction = new Instruction();
+    private Info info = new Info();
+    private Validator validator = new Validator();
+    private ChessBoard service = new ChessBoard();
 
-
-    public int  runWidth() {
-        boolean flag;
-        int number;
-        do {
-            System.out.print(info.getInfo("width"));
-            number = input.getNumber();
-            if (validator.isPositiveNumber(number)) {
-                flag = true;
-                return number;
-            } else {
-                instruction.getInstruction();
-                flag = false;
-            }
-        }
-        while (flag == false);
-        return 0;
+    public void run() {
+        Model model = new Model(createSide("width"), createSide("height"));
+        service.chessBoard(model);
     }
 
-    public int  runHeight() {
-        boolean flag;
-        int number;
-        do {
-            System.out.print(info.getInfo("height"));
-            number = input.getNumber();
-            if (new Validator().isPositiveNumber(number)) {
-                flag = true;
-                return number;
-            } else {
-                instruction.getInstruction();
-                flag = false;
-            }
+    public int createSide(String param) {
+        info.getInfo(param);
+        int number = new Input().getNumber();
+        while (!validator.isPositiveNumber(number)) {
+            instruction.getInstruction();
+            number = new Input().getNumber();
         }
-        while (flag == false);
-        return 0;
+        return number;
     }
+
 
 }

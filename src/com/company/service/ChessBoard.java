@@ -1,14 +1,14 @@
-package com.company.chessBoard;
+package com.company.service;
 
 import com.company.model.Model;
 
 public class ChessBoard {
 
-    public String chessBoard(int height,int width) {
+    public String chessBoard(Model param) {
 
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if ((i + j)% 2 == 1) {
+        for (int i = 0; i < param.getHeight(); i++) {
+            for (int j = 0; j < param.getWidth(); j++) {
+                if ((i + j) % 2 == 1) {
                     System.out.print(' ');
                 } else {
                     System.out.print('*');

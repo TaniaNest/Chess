@@ -2,8 +2,8 @@ package com.company.util;
 
 public class Info {
 
-    public String getInfo(String param) {
+    public void getInfo(String param) {
 
-       return "Input the " + param+": ";
+        System.out.print("Input the " + param + ": ");
     }
 }
