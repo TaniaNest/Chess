@@ -6,4 +6,9 @@ public class Info {
 
         System.out.print("Input the " + param + ": ");
     }
+
+    public void getOutput(String board) {
+
+        System.out.print(board);
+    }
 }

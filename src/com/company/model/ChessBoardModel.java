@@ -1,11 +1,11 @@
 package com.company.model;
 
-public class Model {
+public class ChessBoardModel {
 
     private int width;
     private int height;
 
-    public Model(int width, int height) {
+    public ChessBoardModel(int width, int height) {
         this.width = width;
         this.height = height;
     }
