@@ -5,10 +5,9 @@ import java.util.Scanner;
 
 public class Input {
 
-    private Scanner scanner = new Scanner(System.in);
-
     public int getNumber() {
         try {
+            Scanner scanner = new Scanner(System.in);
             return scanner.nextInt();
         } catch (InputMismatchException ex) {
             System.out.println(ex.getMessage());

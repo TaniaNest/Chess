@@ -13,6 +13,7 @@ public class ChessBoardController {
     private Info info = new Info();
     private Validator validator = new Validator();
     private ChessBoardService service = new ChessBoardService();
+    private Input input = new Input();
 
     public void run() {
         ChessBoardModel chessBoardModel = new ChessBoardModel(getNumber("width"), getNumber("height"));
@@ -21,10 +22,10 @@ public class ChessBoardController {
 
     private int getNumber(String param) {
         info.getInfo(param);
-        int number = new Input().getNumber();
+        int number = input.getNumber();
         while (!validator.isValidNumber(number)) {
             instruction.getInstruction();
-            number = new Input().getNumber();
+            number = input.getNumber();
         }
         return number;
     }
